@@ -2,9 +2,9 @@
 
 Exercises
 
-1. How do you make the snake faster or slower?
-2. How can you make the snake go around the edges?
-3. How would you move the food?
+1. How do you make the snake faster or slower? Done!
+2. How can you make the snake go around the edges? 
+3. How would you move the food? DONE!
 4. Change the snake to respond to arrow keys  Done!
 
 """
@@ -40,7 +40,7 @@ def move():
 
     if head == food:
         print('Snake:', len(snake))
-        food.x = randrange(-20, 20) * 10
+        food.x = randrange(-15, 15) * 10 #THESE FUNCTIONS MOVE THE FOOD AROUND RANDOMLY WITHIN A RANGE. RANGE LIMITS HOW FAR THE FOOD WILL SPAWN! DO NOT ALTER THE MULTIPLICATION OR MAKE VALUES TOO BIG! THEY MAY SPAWN OUTSIDE BOUNDRY.
         food.y = randrange(-15, 15) * 10
     else:
         snake.pop(0)
@@ -52,7 +52,7 @@ def move():
 
     square(food.x, food.y, 9, 'green')
     update()
-    ontimer(move, 10)
+    ontimer(move, 10) #CHANGE THIS VARIABLE TO ALTER SPEED OF SNAKE!!
 
 setup(420, 420, 370, 0)
 hideturtle()

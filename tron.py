@@ -32,11 +32,11 @@ def draw():
     p2xy.move(p2aim)
     p2head = p2xy.copy()
 
-    if not inside(p1head) or p1head in p2body:
+    if not inside(p1head) or p1head in p2body or p1head in p1body:
         print('Player blue wins!')
         return
 
-    if not inside(p2head) or p2head in p1body:
+    if not inside(p2head) or p2head in p1body or p2head in p2body:
         print('Player red wins!')
         return
 
@@ -46,7 +46,7 @@ def draw():
     square(p1xy.x, p1xy.y, 3, 'red')
     square(p2xy.x, p2xy.y, 3, 'blue')
     update()
-    ontimer(draw, 50)
+    ontimer(draw, 100)
 
 setup(420, 420, 370, 0)
 hideturtle()
