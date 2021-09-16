@@ -5,7 +5,7 @@ Exercises
 1. How do you make the snake faster or slower?
 2. How can you make the snake go around the edges?
 3. How would you move the food?
-4. Change the snake to respond to arrow keys.
+4. Change the snake to respond to arrow keys  Done!
 
 """
 
@@ -31,7 +31,7 @@ def move():
     head = snake[-1].copy()
     head.move(aim)
 
-    if not inside(head) or head in snake:
+    if  head in snake:
         square(head.x, head.y, 9, 'red')
         update()
         return
@@ -40,7 +40,7 @@ def move():
 
     if head == food:
         print('Snake:', len(snake))
-        food.x = randrange(-15, 15) * 10
+        food.x = randrange(-20, 20) * 10
         food.y = randrange(-15, 15) * 10
     else:
         snake.pop(0)
@@ -52,7 +52,7 @@ def move():
 
     square(food.x, food.y, 9, 'green')
     update()
-    ontimer(move, 100)
+    ontimer(move, 10)
 
 setup(420, 420, 370, 0)
 hideturtle()
@@ -62,5 +62,9 @@ onkey(lambda: change(10, 0), 'Right')
 onkey(lambda: change(-10, 0), 'Left')
 onkey(lambda: change(0, 10), 'Up')
 onkey(lambda: change(0, -10), 'Down')
+onkey(lambda: change(10, 0), 'd')
+onkey(lambda: change(-10, 0), 'a')
+onkey(lambda: change(0, 10), 'w')
+onkey(lambda: change(0, -10), 's')
 move()
 done()
