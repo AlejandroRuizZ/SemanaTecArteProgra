@@ -3,7 +3,7 @@
 Exercises
 
 1. How do you make the snake faster or slower?- Ya
-2. How can you make the snake go around the edges?- 
+2. How can you make the snake go around the edges?- ya
 3. How would you move the food? Ya
 4. Change the snake to respond to mouse clicks. -ya
 
@@ -38,18 +38,17 @@ def move():
     head = snake[-1].copy()
     head.move(aim)
 
-    if  head in snake:
+    if  head in snake:        
         square(head.x, head.y, 9, 'red')
         update()
         return
 
     elif not inside(head):
-        if head.y>189 or head.y<199:
+        if head.y>189 or head.y<-199:
             head.y=(head.y*-1)-10
-
-        elif head.x>189 or head.x<199:
+        elif head.x>189 or head.x<-199:
             head.x=(head.x*-1)-10
-
+        
 
     snake.append(head)
 
@@ -63,13 +62,11 @@ def move():
     clear()
 
     for body in snake:
-        global col
         square(body.x, body.y, 9, sc)
 
     square(food.x, food.y, 9, fc)
     update()
     ontimer(move, 100)
-
 
 setup(420, 420, 370, 0)
 hideturtle()
@@ -83,5 +80,6 @@ onkey(lambda: change(10, 0), 'd')
 onkey(lambda: change(-10, 0), 'a')
 onkey(lambda: change(0, 10), 'w')
 onkey(lambda: change(0, -10), 's')
+onkey(lambda: aim.rotate(90),"space")
 move()
 done()
