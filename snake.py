@@ -18,7 +18,7 @@ from threading import Thread
 
 #Función para abrir un archivo de música
 def music_func():
-    playsound('musicSnake.mid')
+    playsound('snakeMusic.mid')
 
 
 #Definir función que llama audio

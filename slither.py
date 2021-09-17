@@ -19,7 +19,7 @@ from threading import Thread
 
 #Función para abrir un archivo de música
 def music_func():
-    playsound('musicSnake2.mid')
+    playsound('snakeMusic2.mid')
 
 
 #Definir función que llama audio
@@ -39,6 +39,7 @@ col = [ 'yellow', 'green', 'blue','black', 'orange', 'pink',"purple"]
 fc= choice (col)
 if fc=="blue":
     fc= choice(col)
+
 
 def change(x, y):
     "Change snake direction."
