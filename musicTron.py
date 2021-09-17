@@ -1,0 +1,80 @@
+from music21 import note, stream
+
+N1 = note.Note('G3')
+N1.duration.quarterLength = 1.5
+N2 = note.Note('G3')
+N2.duration.quarterLength = 0.5
+N3 = note.Note('B3')
+N3.duration.quarterLength = 0.4
+N4 = note.Note('G3')
+N4.duration.quarterLength = 1
+N5 = note.Note('G3')
+N5.duration.quarterLength = 1
+N6 = note.Note('G3')
+N6.duration.quarterLength = 1
+N7 = note.Note('G3')
+N7.duration.quarterLength = 0.5
+N8 = note.Note('B3')
+N8.duration.quarterLength = 0.4
+N9 = note.Note('G3')
+N9.duration.quarterLength = 0.5
+N10 = note.Note('F3')
+N10.duration.quarterLength = 1
+
+N11 = note.Note('G3')
+N11.duration.quarterLength = 1.5
+N12 = note.Note('G3')
+N12.duration.quarterLength = 0.5
+N13 = note.Note('B3')
+N13.duration.quarterLength = 0.4
+N14 = note.Note('G3')
+N14.duration.quarterLength = 1
+N15 = note.Note('G3')
+N15.duration.quarterLength = 1
+N16 = note.Note('G3')
+N16.duration.quarterLength = 1
+N17 = note.Note('G3')
+N17.duration.quarterLength = 0.5
+N18 = note.Note('B3')
+N18.duration.quarterLength = 0.4
+N19 = note.Note('G3')
+N19.duration.quarterLength = 0.5
+N20 = note.Note('F3')
+N20.duration.quarterLength = 1
+
+N21 = note.Note('C4')
+N21.duration.quarterLength = 1.5
+N22 = note.Note('C4')
+N22.duration.quarterLength = 0.5
+N23 = note.Note('E4')
+N23.duration.quarterLength = 0.4
+N24 = note.Note('C4')
+N24.duration.quarterLength = 1
+N25 = note.Note('C4')
+N25.duration.quarterLength = 1
+N26 = note.Note('C4')
+N26.duration.quarterLength = 1
+N27 = note.Note('C4')
+N27.duration.quarterLength = 0.5
+N28 = note.Note('E4')
+N28.duration.quarterLength = 0.4
+N29 = note.Note('C4')
+N29.duration.quarterLength = 0.5
+N30 = note.Note('B3')
+N30.duration.quarterLength = 1
+N31 = note.Note('A3')
+N31.duration.quarterLength = 1.5
+
+N32 = note.Note('D4')
+N32.duration.quarterLength = 0.5
+N33 = note.Note('G4')
+N33.duration.quarterLength = 0.5
+N34 = note.Note('D4')
+N34.duration.quarterLength = 1
+N35 = note.Note('D4')
+N35.duration.quarterLength = 2
+
+Secuencia1 = [N1, N2, N3, N4, N5, N6, N7, N8, N9, N10, N11, N12, N13, N14, N15, N16, N17, N18, N19, N20, N21, N22, N23, N24, N25, N26, N27, N28, N29, N30, N31, N32, N33, N34, N35]
+st = stream.Stream(Secuencia1)
+
+st.write('midi', fp = "badGuy.mid")

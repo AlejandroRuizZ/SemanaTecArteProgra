@@ -52,7 +52,7 @@ def move():
 
     square(food.x, food.y, 9, 'green')
     update()
-    ontimer(move, 10) #CHANGE THIS VARIABLE TO ALTER SPEED OF SNAKE!!
+    ontimer(move, 100) #CHANGE THIS VARIABLE TO ALTER SPEED OF SNAKE!!
 
 setup(420, 420, 370, 0)
 hideturtle()
