@@ -2,30 +2,37 @@
 
 Exercises
 
-1. How do you make the snake faster or slower? Done!
-2. How can you make the snake go around the edges? 
-3. How would you move the food? DONE!
-4. Change the snake to respond to arrow keys  Done!
+1. How do you make the snake faster or slower?- Ya
+2. How can you make the snake go around the edges?- 
+3. How would you move the food? Ya
+4. Change the snake to respond to mouse clicks. -ya
 
 """
-
-from turtle import *
+from random import choice
+from random import random
 from random import randrange
+from turtle import *
 from freegames import square, vector
 
 food = vector(0, 0)
 snake = [vector(10, 0)]
 aim = vector(0, -10)
 
+col = [ 'yellow', 'green', 'blue','black', 'orange', 'pink',"purple"]
+sc= choice(col)
+fc= choice (col)
+
 def change(x, y):
     "Change snake direction."
     aim.x = x
     aim.y = y
 
+
 def inside(head):
     "Return True if head inside boundaries."
-    return -200 < head.x < 190 and -200 < head.y < 190
-
+    return -199 < head.x < 189 and -199 < head.y < 189
+    
+    
 def move():
     "Move snake forward one segment."
     head = snake[-1].copy()
@@ -36,11 +43,19 @@ def move():
         update()
         return
 
+    elif not inside(head):
+        if head.y>189 or head.y<199:
+            head.y=(head.y*-1)-10
+
+        elif head.x>189 or head.x<199:
+            head.x=(head.x*-1)-10
+
+
     snake.append(head)
 
     if head == food:
         print('Snake:', len(snake))
-        food.x = randrange(-15, 15) * 10 #THESE FUNCTIONS MOVE THE FOOD AROUND RANDOMLY WITHIN A RANGE. RANGE LIMITS HOW FAR THE FOOD WILL SPAWN! DO NOT ALTER THE MULTIPLICATION OR MAKE VALUES TOO BIG! THEY MAY SPAWN OUTSIDE BOUNDRY.
+        food.x = randrange(-15, 15) * 10
         food.y = randrange(-15, 15) * 10
     else:
         snake.pop(0)
@@ -48,11 +63,13 @@ def move():
     clear()
 
     for body in snake:
-        square(body.x, body.y, 9, 'black')
+        global col
+        square(body.x, body.y, 9, sc)
 
-    square(food.x, food.y, 9, 'green')
+    square(food.x, food.y, 9, fc)
     update()
-    ontimer(move, 10) #CHANGE THIS VARIABLE TO ALTER SPEED OF SNAKE!!
+    ontimer(move, 100)
+
 
 setup(420, 420, 370, 0)
 hideturtle()
