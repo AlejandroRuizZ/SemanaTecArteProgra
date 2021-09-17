@@ -30,15 +30,17 @@ def change(x, y):
     aim.x = x
     aim.y = y
 
+
 def change2(x,y):
     "Change snake2 direction."
     aim2.x = x
     aim2.y = y
 
+
 def inside(head):
     "Return True if head inside boundaries."
     return -199 < head.x < 189 and -199 < head.y < 189
-    
+
     
 def move():
     "Move snake forward one segment."

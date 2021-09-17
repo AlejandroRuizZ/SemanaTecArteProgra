@@ -24,6 +24,7 @@ def inside(head):
     "Return True if head inside screen."
     return -200 < head.x < 200 and -200 < head.y < 200
 
+
 def draw():
     "Advance players and draw game."
     p1xy.move(p1aim)
@@ -63,6 +64,7 @@ def draw():
     square(p2xy.x, p2xy.y, 3, 'blue')
     update()
     ontimer(draw, 100)
+
 
 setup(420, 420, 370, 0)
 hideturtle()
