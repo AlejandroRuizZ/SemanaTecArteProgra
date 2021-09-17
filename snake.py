@@ -37,6 +37,7 @@ col = [ 'yellow', 'green', 'blue','black', 'orange', 'pink',"purple"]
 sc= choice(col)
 fc= choice (col)
 
+
 def change(x, y):
     "Change snake direction."
     aim.x = x
