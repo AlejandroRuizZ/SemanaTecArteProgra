@@ -65,6 +65,7 @@ def move():
 
     square(food.x, food.y, 9, fc)
     update()
+    ontimer(move, 100) #CHANGE THIS VARIABLE TO ALTER SPEED OF SNAKE!!
     ontimer(move, 100)
 
 setup(420, 420, 370, 0)
