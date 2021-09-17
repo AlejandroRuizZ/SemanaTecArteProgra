@@ -22,6 +22,8 @@ Se agregó un input de las teclas WASD y Space para moverse
 
 Se diseñó el juego fusionando Tron y Snake
 
+Se agregó música de fondo
+
 ### Autores
 
 Alejandro Ruiz
