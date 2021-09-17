@@ -11,7 +11,8 @@ Exercises
 from random import choice
 from random import random
 from random import randrange
-from turtle import *
+from turtle import clear, update, setup, hideturtle, tracer, ontimer
+from turtle import listen, onkey, done
 from freegames import square, vector
 from playsound import playsound
 from threading import Thread

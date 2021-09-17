@@ -10,7 +10,8 @@ Exercises
 """
 from random import choice
 from random import randrange
-from turtle import *
+from turtle import clear, update, ontimer, setup, hideturtle, listen, tracer
+from turtle import onkey, done
 from freegames import square, vector
 from playsound import playsound
 from threading import Thread
@@ -35,6 +36,7 @@ aim = vector(0, -10)
 col = [ 'yellow', 'green', 'blue','black', 'orange', 'pink',"purple"]
 sc= choice(col)
 fc= choice (col)
+
 
 def change(x, y):
     "Change snake direction."
