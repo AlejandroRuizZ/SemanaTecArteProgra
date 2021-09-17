@@ -11,6 +11,21 @@ Exercises
 
 from turtle import *
 from freegames import square, vector
+from playsound import playsound
+from threading import Thread
+
+
+#Función para abrir un archivo de música
+def music_func():
+    playsound('badGuy.mid')
+
+
+#Definir función que llama audio
+music = Thread(target = music_func)
+music.daemon = True
+
+#Iniciar música
+music.start()
 
 p1xy = vector(-100, 0)
 p1aim = vector(4, 0)
